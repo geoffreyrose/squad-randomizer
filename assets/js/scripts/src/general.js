@@ -19,21 +19,28 @@ $(function(){
    				return squad[Math.floor(Math.random() * squad.length)];
 			}
 
-			$('.member1 .squad-name').text(getMessage());
+			function squadImg(member) {
+				var selected = $('.member' + member +' .squad-name').text();
+				var img = $('.members input[value="' + selected + '"]').attr('data-img')
+				$('.member' + member +' img').attr('src','/assets/img/' + img + '.png')
+			}
 
-			console.log(squad);
+			$('.member1 .squad-name').text(getMessage());
+			squadImg('1');
+
+
 			var removeItem = $('.member1 .squad-name').text();
 			squad = jQuery.grep(squad, function(value) {
 			  return value != removeItem;
 			});
 
-			console.log(squad);
 			$('.member2 .squad-name').text(getMessage());
+			squadImg('2');
 		}
 
 		sqaudSelect('me1');
-		//sqaudSelect('me2');
-		//sqaudSelect('me3');
+		sqaudSelect('me2');
+		sqaudSelect('me3');
 		
 	});
 });
