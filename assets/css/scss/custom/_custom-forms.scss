@@ -1,0 +1,284 @@
+form {
+	margin: 0;
+}
+
+input,select,textarea {
+	margin: 0 0 1em 0;
+	width: 100%;
+	padding: .35em;
+	font-size: 1.15em;
+	@include body-font-regular();
+	border-radius: $global-radius;	
+	border: 1px solid $gray-color;
+	@include single-transition(border);
+	background: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="file"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+	&:active,&:focus {
+		box-shadow: 0 0 2px 0px $primary-color;
+		border: 1px solid $primary-color;
+		outline: none;
+
+	}
+
+	&:disabled {
+		background: lighten($gray-color, 15%);
+		cursor: default;
+	}
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"] {
+	-webkit-appearance:none;	
+}
+
+input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+select {
+	height: 2em;
+	background: #fff;
+	cursor: pointer;
+}
+
+select[multiple="multiple"],select[multiple] {
+	height: 150px;
+}
+
+textarea {
+	height: 7em;
+	resize: vertical;
+}
+
+
+label {
+	width: 100%;
+	display: block;
+	@include heading-font-regular();
+	font-size: 1.25em;
+	margin: 0 0 0.25em 0;
+	float: left;
+}
+
+.checkbox-radio {
+	margin: 0 0 .5em 0;
+	@include body-font-regular();
+	font-size: 1em;
+	padding: 0 0 0 1em;
+	input {
+		margin: 0 .5em 0 0;
+		width: auto;
+		//outline: 1px solid $primary-color;
+		border-radius: 100px;
+	}
+
+	&:hover, &:active,&:focus {
+		input {
+			background: $primary-color;
+		}
+	}
+}
+
+.button, button {
+	background: $primary-color;
+	@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+	color: #fff;
+	padding: .5em 1em;
+	width: 100%;
+	display: block;
+	text-align: center;
+	border-radius:  $global-radius;
+	border: none;
+	margin: .5em 0 1em;
+	@include heading-font-regular();
+	font-size: 1.25em;
+	@include double-transition(background,color, .125s);
+	text-decoration: none;
+	@extend %noselect;
+	cursor: pointer;
+	
+	&:hover, &:active,&:focus {
+		background: darken($primary-color, 10%);
+		@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+		//@include linear-gradient( darken($primary-color, 10%), darken($primary-color, 13%));
+		outline: none;
+		color: #fff;
+		border: none;
+	}
+	
+	&.cancel,&.delete {
+		background: $gray-color;
+		@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+		//@include linear-gradient($gray-color, darken($gray-color, 3%));
+	}
+
+	&.cancel {
+		&:hover, &:active,&:focus {
+			background: darken($gray-color, 20%);
+			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+			//@include linear-gradient( darken($gray-color, 20%), darken($gray-color, 23%));
+		}
+	}
+
+
+	&.delete {
+		&:hover,&:focus {
+			background: $alert-color;
+			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+			//@include linear-gradient( darken($alert-color, 0%), darken($alert-color, 3%));
+		}
+	}
+
+	&.repost,&.filters {
+		background: $gray-color;
+		@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+		//@include linear-gradient($gray-color, darken($gray-color, 3%));
+		
+		&:hover, &:active,&:focus {
+			background: darken($primary-color, 10%);
+			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+			//@include linear-gradient( darken($primary-color, 10%), darken($primary-color, 13%));
+		}
+	}
+
+	&.filters {
+		&.current {
+			background: $primary-color;
+			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+			//@include linear-gradient($primary-color, darken($primary-color, 3%));
+
+			&:hover, &:active,&:focus {
+				background: $primary-color;
+				@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
+				//@include linear-gradient( darken($primary-color, 10%), darken($primary-color, 13%));
+			}
+		}
+	}
+}
+
+.custom-model {
+	cursor: pointer;
+	color: $primary-color;
+}
+
+
+.forgot-password {
+	text-decoration: none;
+	font-size: .9em;
+
+}
+
+.hide-show-parent {
+	position: relative;
+
+	input {
+		padding-right: 3rem;
+	}
+}
+
+.show-hide-password, .show-hide-time, .show-hide-clear {
+	padding: .1rem .25rem;
+	display: none;
+	color: $header-color;
+	border-radius: $global-radius;
+	position: absolute;
+	top: 2.6rem;
+	right: 1.35rem;
+	z-index: 100;
+	cursor: pointer;
+	z-index: 200;
+	font-size: .85em;
+	@include single-transition(all);
+	background: #fff;
+	
+
+	@extend %noselect;
+
+	&:hover, &:active, &:focus {
+		background: lighten($header-color, 30%);
+		color: #fff;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.show-hide-clear {
+	display: block;
+	z-index: 199;
+	//background: lighten($header-color, 40%);
+}
+
+.label-input {
+	@extend .small-12;
+	@extend .medium-6;
+	@extend .columns;
+}
+
+.label-input-full {
+	@extend .small-12;
+	@extend .columns;
+}
+
+.form-grid {
+	@extend .small-12;
+	@extend .xlarge-6;
+	@extend .columns;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} {
+
+	.button, button {
+		width: auto;
+		display: inline-block;
+		padding: .5em 2em;
+	}
+}
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
+
