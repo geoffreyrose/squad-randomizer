@@ -9,7 +9,7 @@ $(function(){
 		var game = $('[name="game"]').val();
 		var squad = [];
 		function sqaudSelect(gameNumber) {
-			if( game == gameNumber) {
+			if( game === gameNumber) {
 				$('.' + gameNumber + ' input:checked').each(function(){
 					squad.push($(this).val());
 				});
@@ -21,8 +21,8 @@ $(function(){
 
 			function squadImg(member) {
 				var selected = $('.member' + member +' .squad-name').text();
-				var img = $('.members input[value="' + selected + '"]').attr('data-img')
-				$('.member' + member +' img').attr('src','/assets/img/' + img + '.png')
+				var img = $('.members input[value="' + selected + '"]').attr('data-img');
+				$('.member' + member +' img').attr('src','assets/img/' + img + '.png');
 			}
 
 			$('.member1 .squad-name').text(getMessage());
@@ -31,7 +31,7 @@ $(function(){
 
 			var removeItem = $('.member1 .squad-name').text();
 			squad = jQuery.grep(squad, function(value) {
-			  return value != removeItem;
+			  return value !== removeItem;
 			});
 
 			$('.member2 .squad-name').text(getMessage());
