@@ -4,7 +4,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { 
 	margin: 0.25em 0 .5em;
-	color: #262626;
+	color: $white;
 	width: 100%;
 	float: left;
 }
@@ -25,7 +25,7 @@ h2 {
 
 h3 {
 	@include heading-font-bold();
-	font-size: 1.625em;	
+	font-size: 1.3em;	
 	line-height: 1.13em;
 }
 
@@ -109,72 +109,10 @@ em {
 @media #{$medium-up} { }
 @media #{$medium-only} { }
 
-@media #{$large-up} { 
-
-	h1, h2, h3, h4, h5, h6 { 
-		
-	}
-
-	h1 {
-		font-size: 3em;	
-		line-height: 1.25em;
-	}
-
-	h2 {
-		font-size: 2.5em;
-		line-height: 1.25em;
-	}
-
-	h3 {
-		font-size: 2em;	
-		line-height: 1.25em;
-	}
-
-	h4 {
-		font-size: 1.75em;	
-		line-height: 1.25em;
-	}
-
-	h5 {
-		font-size: 1.5em;	
-		line-height: 1.25em;
-	}
-
-	h6 {
-		font-size: 1.45em;	
-		line-height: 1.25em;
-	}
-
-	p {
-		line-height: 1.25em;
-	}
-
-	blockquote {
-		font-size: 1.5em;
-		line-height: 1.5em;
-	}
-
-	ul,ol {
-		li {
-			line-height: 1.25em;
-		}
-	}
-
-}
+@media #{$large-up} { }
 @media #{$large-only} { }
 
-@media #{$xlarge-up} { 
-	p {
-		font-size: 1.15em;
-	}
-
-	ul,ol {
-		li {
-			font-size: 1.15em;
-		}
-	}
-
-}
+@media #{$xlarge-up} { }
 @media #{$xlarge-only} { }
 
 @media #{$xxlarge-up} { }

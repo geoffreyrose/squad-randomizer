@@ -1,6 +1,42 @@
 main {
-	max-width: 700px;
-	margin: 1.5em auto 0;
+	max-width: 500px;
+	padding: 1.5em 0 0;
+	margin: 0 auto;
+}
+
+body {
+	background: $header-color;
+}
+
+.squad-name {
+	color: $white;
+	text-align: center;
+	@include heading-font-bold();
+	margin-top: .25em;
+}
+
+.selection {
+	background: #f00;
+
+	img {
+		width: 100%;
+		min-height: 100px;
+	}
+}
+
+.members {
+	.checkbox-radio {
+		width: 50%;
+		float: left;
+	}
+
+	&.me1, &.me2, &.me3 {
+		display: none;
+	}
+
+	&.me1 {
+		display: inline-block;
+	}
 }
 
 @media #{$small-up} { }

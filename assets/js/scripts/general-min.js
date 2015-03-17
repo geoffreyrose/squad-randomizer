@@ -1,1 +1,1 @@
-$(function(){});
+$(function(){$('[name="game"]').change(function(){var e=$('[name="game"]').val();$(".me1, .me2, .me3").hide(),$("."+e).show()}),$(".randomize").click(function(){function e(e){function m(){return a[Math.floor(Math.random()*a.length)]}n==e&&$("."+e+" input:checked").each(function(){a.push($(this).val())}),$(".member1 .squad-name").text(m()),console.log(a);var t=$(".member1 .squad-name").text();a=jQuery.grep(a,function(e){return e!=t}),console.log(a),$(".member2 .squad-name").text(m())}var n=$('[name="game"]').val(),a=[];e("me1")})});

@@ -87,6 +87,8 @@ label {
 	@include body-font-regular();
 	font-size: 1em;
 	padding: 0 0 0 1em;
+	color: $white;
+	font-size: .85em;
 	input {
 		margin: 0 .5em 0 0;
 		width: auto;
@@ -96,7 +98,7 @@ label {
 
 	&:hover, &:active,&:focus {
 		input {
-			background: $primary-color;
+			//background: $primary-color;
 		}
 	}
 }
@@ -127,126 +129,9 @@ label {
 		color: #fff;
 		border: none;
 	}
-	
-	&.cancel,&.delete {
-		background: $gray-color;
-		@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-		//@include linear-gradient($gray-color, darken($gray-color, 3%));
-	}
-
-	&.cancel {
-		&:hover, &:active,&:focus {
-			background: darken($gray-color, 20%);
-			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-			//@include linear-gradient( darken($gray-color, 20%), darken($gray-color, 23%));
-		}
-	}
-
-
-	&.delete {
-		&:hover,&:focus {
-			background: $alert-color;
-			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-			//@include linear-gradient( darken($alert-color, 0%), darken($alert-color, 3%));
-		}
-	}
-
-	&.repost,&.filters {
-		background: $gray-color;
-		@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-		//@include linear-gradient($gray-color, darken($gray-color, 3%));
-		
-		&:hover, &:active,&:focus {
-			background: darken($primary-color, 10%);
-			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-			//@include linear-gradient( darken($primary-color, 10%), darken($primary-color, 13%));
-		}
-	}
-
-	&.filters {
-		&.current {
-			background: $primary-color;
-			@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-			//@include linear-gradient($primary-color, darken($primary-color, 3%));
-
-			&:hover, &:active,&:focus {
-				background: $primary-color;
-				@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-				//@include linear-gradient( darken($primary-color, 10%), darken($primary-color, 13%));
-			}
-		}
-	}
-}
-
-.custom-model {
-	cursor: pointer;
-	color: $primary-color;
-}
-
-
-.forgot-password {
-	text-decoration: none;
-	font-size: .9em;
 
 }
 
-.hide-show-parent {
-	position: relative;
-
-	input {
-		padding-right: 3rem;
-	}
-}
-
-.show-hide-password, .show-hide-time, .show-hide-clear {
-	padding: .1rem .25rem;
-	display: none;
-	color: $header-color;
-	border-radius: $global-radius;
-	position: absolute;
-	top: 2.6rem;
-	right: 1.35rem;
-	z-index: 100;
-	cursor: pointer;
-	z-index: 200;
-	font-size: .85em;
-	@include single-transition(all);
-	background: #fff;
-	
-
-	@extend %noselect;
-
-	&:hover, &:active, &:focus {
-		background: lighten($header-color, 30%);
-		color: #fff;
-	}
-	&:focus {
-		outline: none;
-	}
-}
-
-.show-hide-clear {
-	display: block;
-	z-index: 199;
-	//background: lighten($header-color, 40%);
-}
-
-.label-input {
-	@extend .small-12;
-	@extend .medium-6;
-	@extend .columns;
-}
-
-.label-input-full {
-	@extend .small-12;
-	@extend .columns;
-}
-
-.form-grid {
-	@extend .small-12;
-	@extend .xlarge-6;
-	@extend .columns;
-}
 
 :invalid {
   box-shadow: none;
@@ -265,11 +150,6 @@ label {
 
 @media #{$medium-up} {
 
-	.button, button {
-		width: auto;
-		display: inline-block;
-		padding: .5em 2em;
-	}
 }
 @media #{$medium-only} { }
 
