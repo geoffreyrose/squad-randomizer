@@ -27,7 +27,7 @@ $(function(){
 
 			$('.member1 .squad-name').text(getMessage());
 			squadImg('1');
-
+			console.log(squad);
 
 			var removeItem = $('.member1 .squad-name').text();
 			squad = jQuery.grep(squad, function(value) {
@@ -36,11 +36,12 @@ $(function(){
 
 			$('.member2 .squad-name').text(getMessage());
 			squadImg('2');
+			console.log(squad);
 		}
 
 		sqaudSelect('me1');
-		sqaudSelect('me2');
-		sqaudSelect('me3');
+		//sqaudSelect('me2');
+		//sqaudSelect('me3');
 		
 	});
 });
