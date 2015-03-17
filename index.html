@@ -6,7 +6,9 @@
 	<meta name="description" content="A web app to randomizer your squad in the mass effect games">
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
@@ -26,12 +28,50 @@
 
 </head>
 <body>
-	<footer>
-
-
+	<main>
+		<article class="row">
+			<section class="small-12 columns">
+				<h1>Mass Effect Squad Selector</h1>
+			</section>
+			<section class="small-12 columns">
+				<select name="">
+					<option value="me1">Mass Effect 1</option>
+					<option value="me2">Mass Effect 2</option>
+					<option value="me3">Mass Effect 3</option>
+				</select>
+			</section>
+			<section class="small-6 columns">
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+			</section>
+			<section class="small-6 columns">
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+				<label class="checkbox-radio"><input type="checkbox">[NAME]</label>
+			</section>
+			<div class="small-12 columns">
+				<a class="button">Randomize Squad</a>
+				<h3>Your Squad</h3>
+			</div>
+			<section class="small-6 columns">
+				<div class="selection">
+					<p>[NAME HERE]</p>
+				</div>
+			</section>
+			<section class="small-6 columns">
+				<div class="selection">
+					<p>[NAME HERE]</p>
+				</div>
+			</section>
+		</article>
+	</main>
 	<!-- js -->
 	<script src="/assets/js/lib/jquery.js"></script>
 	<script async src="/assets/js/scripts/general-min.js"></script>
-	</footer>
 </body>
 </html>
