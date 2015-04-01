@@ -2,11 +2,25 @@ main {
 	max-width: 500px;
 	padding: 1.5em 0 0;
 	margin: 0 auto;
+	height: 100%;
 }
 
 body {
 	background: $header-color;
+	height: 100%;
 }
+
+article {
+	height: 100%;
+	position: relative;
+}
+
+.squad {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
 
 .squad-name {
 	color: $white;
@@ -17,6 +31,8 @@ body {
 
 .selection {
 	background: $header-color;
+	border: 3px inset darken($header-color, 10%);
+	border-radius: $global-radius;
 
 	img {
 		width: 100%;
@@ -36,6 +52,75 @@ body {
 
 	&.me1 {
 		display: inline-block;
+	}
+
+	@mixin single-transition($property:all, $speed: .15s, $ease:linear) {
+	-webkit-transition: $property $speed $ease;
+	-moz-transition: $property $speed $ease;
+	-o-transition: $property $speed $ease;
+	transition: $property $speed $ease;
+}
+	.switch {
+		padding: .35em 0;
+		width: 50%;
+		float: left;
+		input {
+			display: none;
+			&:checked {
+				~ .toggle{
+					background: #0f0;
+					&:before {
+						background: #fff;	
+						left: .875em;
+					}
+				}
+			}
+		}
+
+		h6, .h6 {
+			display: inline-block;
+			width: auto;
+			float: left;
+			padding: 0.125em 0 0 .5em;
+			margin: 0 0 0 1.75em;
+			font-size: .5em;
+
+		}
+
+		label {
+			width: auto;
+			padding: 0em 0 0 .5em;
+			font-size: .9em;
+			margin: 0;
+		}
+
+		.toggle {
+			font-size: 1em;
+			background: #ddd;
+			//border: 1px solid #444;
+			height: 1.25em;
+			width: 2em;
+			display: block;
+			float: left;
+			position: relative;
+			@include single-transition();
+			border-radius: 100em;
+			margin: 0;
+
+			&:before {
+				content: '';
+				@include single-transition;
+				background: #fff;
+				height: 1em;
+				width: 1em;
+				display: block;
+				position: absolute;
+				top: .125em;
+				left: .125em;
+				border-radius: 100%;
+				box-shadow: 0 0 .125em #bbb;
+			}	
+		}
 	}
 }
 
