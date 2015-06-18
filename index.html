@@ -30,68 +30,216 @@
 <body>
 	<main>
 		<article class="row">
-			<section class="small-12 columns">
-				<h1>Mass Effect Squad</h1>
-			</section>
-			<section class="small-12 columns">
-				<select name="game">
-					<option value="me1">Mass Effect 1</option>
-					<option value="me2">Mass Effect 2</option>
-					<option value="me3">Mass Effect 3</option>
-				</select>
-			</section>
+			<div class="choices">
+				<section class="small-12 columns">
+					<h1>Mass Effect Squad</h1>
+				</section>
+				<section class="small-12 columns">
+					<select name="game">
+						<option value="me1">Mass Effect 1</option>
+						<option value="me2">Mass Effect 2</option>
+						<option value="me3">Mass Effect 3</option>
+					</select>
+				</section>
 
-			<section class="small-12 columns members me1">
-				<label class="checkbox-radio me1"><input checked type="checkbox" data-img="ashley" value="Ashley">Ashley</label>
-				<label class="checkbox-radio me1"><input checked type="checkbox" data-img="kaidan" value="Kaidan">Kaidan</label>
-				<label class="checkbox-radio me1"><input checked type="checkbox" data-img="garrus" value="Garrus">Garrus</label>
-				<label class="checkbox-radio me1"><input checked type="checkbox" data-img="liara" value="Liara">Liara</label>
-				<label class="checkbox-radio me1"><input checked type="checkbox" data-img="tali" value="Tali">Tali</label>
-				<label class="checkbox-radio me1"><input checked type="checkbox" data-img="wrex" value="Wrex">Wrex</label>
-			</section>
+				<section class="small-12 columns members me1">
+					<div class="switch">
+						<input id="ashley-m1" checked type="checkbox" data-img="ashley" value="Ashley">
+						<label class="toggle" for="ashley-m1" class="checkbox-radio"></label>
+						<label for="ashley-m1" class="checkbox-radio">Ashley</label>
+						
+					</div>
 
-			<section class="small-12 columns members me2">
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="garrus" value="Garrus">Garrus</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="tali" value="Tali">Tali</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="grunt" value="Grunt">Grunt</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="jack" value="Jack">Jack</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="jacob" value="Jacob">Jacob</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="kasumi" value="Kasumi">Kasumi</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="legion" value="Legion">Legion</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="miranda" value="Miranda">Miranda</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="mordin" value="Mordin">Mordin</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="samara" value="Samara/Morinth">Samara/Morinth</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="thane" value="Thane">Thane</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="zaeed" value="Zaeed">Zaeed</label>
-			</section>
+					<div class="switch">
+						<input id="kaidan" checked type="checkbox" data-img="kaidan" value="Kaidan">
+						<label class="toggle" for="kaidan" class="checkbox-radio"></label>
+						<label for="kaidan" class="checkbox-radio">Kaidan</label>
+					</div>
 
-			<section class="small-12 columns members me3">
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="ashley" value="Ashley/Kaidan">Ashley/Kaidan</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="garrus" value="Garrus">Garrus</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="liara" value="Liara">Liara</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="tali" value="Tali">Tali</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="edi" value="EDI">EDI</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="james" value="James">James</label>
-				<label class="checkbox-radio"><input checked type="checkbox" data-img="javik" value="Javik">Javik</label>
-			</section>
+					<div class="switch">
+						<input id="garrus-m1" checked type="checkbox" data-img="garrus" value="Garrus">
+						<label class="toggle" for="garrus-m1" class="checkbox-radio"></label>
+						<label for="garrus-m1" class="checkbox-radio">Garrus</label>
+					</div>
 
+					<div class="switch">
+						<input id="liara-m1" checked type="checkbox" data-img="liara" value="Liara">
+						<label class="toggle" for="liara-m1" class="checkbox-radio"></label>
+						<label for="liara-m1" class="checkbox-radio">Liara</label>
+					</div>
 
-			<div class="small-12 columns">
-				<a class="button randomize">Randomize Squad</a>
-				<h3>Your Squad</h3>
+					<div class="switch">
+						<input id="tali-m1" checked type="checkbox" data-img="tali" value="Tali">
+						<label class="toggle" for="tali-m1" class="checkbox-radio"></label>
+						<label for="tali-m1" class="checkbox-radio">Tali</label>
+					</div>
+
+					<div class="switch">
+						<input id="wrex" checked type="checkbox" data-img="wrex" value="Wrex">
+						<label class="toggle" for="wrex" class="checkbox-radio"></label>
+						<label for="wrex" class="checkbox-radio">Wrex</label>
+					</div>
+
+				</section>
+
+				<section class="small-12 columns members me2">
+					<div class="switch">
+						<input id="Garrus-m2" checked type="checkbox" data-img="" value="Garrus">
+						<label class="toggle" for="Garrus-m2" class="checkbox-radio"></label>
+						<label for="Garrus-m2" class="checkbox-radio">Garrus</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="tali-m2" checked type="checkbox" data-img="tali" value="Tali">
+						<label class="toggle" for="tali-m2" class="checkbox-radio"></label>
+						<label for="tali-m2" class="checkbox-radio">Tali</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="grunt" checked type="checkbox" data-img="grunt" value="Grunt">
+						<label class="toggle" for="grunt" class="checkbox-radio"></label>
+						<label for="grunt" class="checkbox-radio">Grunt</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="jack" checked type="checkbox" data-img="jack" value="Jack">
+						<label class="toggle" for="jack" class="checkbox-radio"></label>
+						<label for="jack" class="checkbox-radio">Jack</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="jacob" checked type="checkbox" data-img="jacob" value="Jacob">
+						<label class="toggle" for="jacob" class="checkbox-radio"></label>
+						<label for="jacob" class="checkbox-radio">Jacob</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="kasumi" checked type="checkbox" data-img="kasumi" value="Kasumi">
+						<label class="toggle" for="kasumi" class="checkbox-radio"></label>
+						<label for="kasumi" class="checkbox-radio">Kasumi</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="legion" checked type="checkbox" data-img="legion" value="Legion">
+						<label class="toggle" for="legion" class="checkbox-radio"></label>
+						<label for="legion" class="checkbox-radio">Legion</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="miranda" checked type="checkbox" data-img="miranda" value="Miranda">
+						<label class="toggle" for="miranda" class="checkbox-radio"></label>
+						<label for="miranda" class="checkbox-radio">Miranda</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="mordin" checked type="checkbox" data-img="mordin" value="Mordin">
+						<label class="toggle" for="mordin" class="checkbox-radio"></label>
+						<label for="mordin" class="checkbox-radio">Mordin</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="samara" checked type="checkbox" data-img="samara" value="Samara/Morinth">
+						<label class="toggle" for="samara" class="checkbox-radio"></label>
+						<label for="samara" class="checkbox-radio">Samara/Morinth</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="thane" checked type="checkbox" data-img="thane" value="Thane">
+						<label class="toggle" for="thane" class="checkbox-radio"></label>
+						<label for="thane" class="checkbox-radio">Thane</label>
+					</div>
+
+					<div class="switch">
+						<input id="zaeed" checked type="checkbox" data-img="zaeed" value="Zaeed">
+						<label class="toggle" for="zaeed" class="checkbox-radio"></label>
+						<label for="zaeed" class="checkbox-radio">Zaeed</label>
+
+					</div>
+
+				</section>
+
+				<section class="small-12 columns members me3">
+					<div class="switch">
+						<input id="ashley-m3" checked type="checkbox" data-img="ashley" value="Ashley/Kaidan">
+						<label class="toggle" for="ashley-m3" class="checkbox-radio"></label>
+						<label for="ashley-m3" class="checkbox-radio">Ashley/Kaidan</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="garrus-m3" checked type="checkbox" data-img="garrus" value="Garrus">
+						<label class="toggle" for="garrus-m3" class="checkbox-radio"></label>
+						<label for="garrus-m3" class="checkbox-radio">Garrus</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="liara-m3" checked type="checkbox" data-img="liara" value="Liara">
+						<label class="toggle" for="liara-m3" class="checkbox-radio"></label>
+						<label for="liara-m3" class="checkbox-radio">Liara</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="tali-m3" checked type="checkbox" data-img="tali" value="Tali">
+						<label class="toggle" for="tali-m3" class="checkbox-radio"></label>
+						<label for="tali-m3" class="checkbox-radio">Tali</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="edi" checked type="checkbox" data-img="edi" value="EDI">
+						<label class="toggle" for="edi" class="checkbox-radio"></label>
+						<label for="edi" class="checkbox-radio">EDI</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="james" checked type="checkbox" data-img="james" value="James">
+						<label class="toggle" for="james" class="checkbox-radio"></label>
+						<label for="james" class="checkbox-radio">James</label>
+
+					</div>
+
+					<div class="switch">
+						<input id="javik" checked type="checkbox" data-img="javik" value="Javik">
+						<label class="toggle" for="javik" class="checkbox-radio"></label>
+						<label for="javik" class="checkbox-radio">Javik</label>
+
+					</div>
+				</section>
+				<div class="small-12 columns">
+					<a class="button randomize">Randomize Squad</a>
+				</div>
 			</div>
-			<section class="small-6 columns member1">
-				<div class="selection">
-					<img src="assets/img/n7.png" alt="">
+			<div class="squad">
+				<div class="small-12 columns">
+					<h3>Your Squad</h3>
 				</div>
-				<p class="squad-name"></p>
-			</section>
-			<section class="small-6 columns member2">
-				<div class="selection">
-					<img src="assets/img/n7.png" alt="">
-				</div>
-				<p class="squad-name"></p>
-			</section>
+				<section class="small-6 columns member1">
+					<div class="selection">
+						<img src="assets/img/n7.png" alt="">
+					</div>
+					<p class="squad-name">[Squad Member]</p>
+				</section>
+				<section class="small-6 columns member2">
+					<div class="selection">
+						<img src="assets/img/n7.png" alt="">
+					</div>
+					<p class="squad-name">[Squad Member]</p>
+				</section>
+			</div>
+			
 		</article>
 	</main>
 	<!-- js -->
