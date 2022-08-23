@@ -1,0 +1,36 @@
+@use '../../bits/colors';
+@use '../../bits/mixins';
+@use '../../bits/setup';
+
+.card {
+    background: colors.$white;
+    border-radius: setup.$global-radius;
+    box-shadow: 0 2px 8px 1px rgba(#999, .25);
+    position: relative;
+
+    .card-heading {
+        background: rgba(colors.$primary-color-500, .75);
+        border-top: 2px solid colors.$primary-color-500;
+        //border-radius: 0 setup.$global-radius 0 0;
+        bottom: 0;
+        color: colors.$white;
+        font-size: 1rem;
+        line-height: 1;
+        left: 0;
+        text-align: left;
+        text-shadow: 0 1px 2px colors.$primary-color-900;
+        margin: 0;
+        padding: .25rem;
+        position: absolute;
+        width: 100%;
+    }
+
+    .card-image {
+        width: 100%;
+
+        img {
+            border-radius: 0 setup.$global-radius 0 0;
+            width: 100%;
+        }
+    }
+}

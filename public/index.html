@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mass Effect Squad Randomizer</title>
+    <meta name="description" content="A web app to randomizer your squad in the mass effect games">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css?v2.0.0" />
+
+    <!-- Fav/Apple Icon -->
+    <link rel="icon" type="image/png" href="assets/images/n7.png" />
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="assets/images/n7.png">
+
+    <!-- Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
+
+    <script async src="assets/js/app.js?v2.0.0"></script>
+
+</head>
+<body>
+<main class="home-base-layout">
+    <div class="choices">
+        <h1>Mass Effect Squad</h1>
+        <div class="fancy-select">
+            <select name="game" id="game-select">
+                <option value="me1">Mass Effect 1</option>
+                <option value="me2">Mass Effect 2</option>
+                <option value="me3">Mass Effect 3</option>
+                <option value="meAndromeda">Mass Effect Andromeda</option>
+            </select>
+            <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 320 512"><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
+        </div>
+    </div>
+
+    <section class="squad-choices-layout me1">
+        <div class="squad-choice">
+            <label class="switch" for="ashley-m1">
+                <input id="ashley-m1" checked type="checkbox" data-img="ashley" value="Ashley">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Ashley</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="kaidan">
+                <input id="kaidan" checked type="checkbox" data-img="kaidan" value="Kaidan">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Kaidan</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="garrus-m1">
+                <input id="garrus-m1" checked type="checkbox" data-img="garrus" value="Garrus">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Garrus</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="liara-m1">
+                <input id="liara-m1" checked type="checkbox" data-img="liara" value="Liara">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Liara</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="tali-m1">
+                <input id="tali-m1" checked type="checkbox" data-img="tali" value="Tali">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Tali</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="wrex">
+                <input id="wrex" checked type="checkbox" data-img="wrex" value="Wrex">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Wrex</span>
+            </label>
+        </div>
+    </section>
+
+    <section class="squad-choices-layout me2 hidden">
+        <div class="squad-choice">
+            <label class="switch" for="Garrus-m2">
+                <input id="Garrus-m2" checked type="checkbox" data-img="garrus" value="Garrus">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Garrus</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="grunt">
+                <input id="grunt" checked type="checkbox" data-img="grunt" value="Grunt">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Grunt</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="jack">
+                <input id="jack" checked type="checkbox" data-img="jack" value="Jack">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Jack</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="jacob">
+                <input id="jacob" checked type="checkbox" data-img="jacob" value="Jacob">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Jacob</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="kasumi">
+                <input id="kasumi" checked type="checkbox" data-img="kasumi" value="Kasumi">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Kasumi</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="legion">
+                <input id="legion" checked type="checkbox" data-img="legion" value="Legion">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Legion</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="miranda">
+                <input id="miranda" checked type="checkbox" data-img="miranda" value="Miranda">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Miranda</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="mordin">
+                <input id="mordin" checked type="checkbox" data-img="mordin" value="Mordin">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Mordin</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="morinth">
+                <input id="morinth" checked type="checkbox" data-img="morinth" value="Morinth/Samara">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Morinth/Samara</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="tali-m2">
+                <input id="tali-m2" checked type="checkbox" data-img="tali" value="Tali">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Tali</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="thane">
+                <input id="thane" checked type="checkbox" data-img="thane" value="Thane">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Thane</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="zaeed">
+                <input id="zaeed" checked type="checkbox" data-img="zaeed" value="Zaeed">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Zaeed</span>
+            </label>
+        </div>
+    </section>
+
+    <section class="squad-choices-layout me3 hidden">
+        <div class="squad-choice">
+            <label class="switch" for="ashley-m3">
+                <input id="ashley-m3" checked type="checkbox" data-img="ashley" value="Ashley/Kaidan">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Ashley<br>Kaidan</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="edi">
+                <input id="edi" checked type="checkbox" data-img="edi" value="EDI">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">EDI</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="garrus-m3">
+                <input id="garrus-m3" checked type="checkbox" data-img="garrus" value="Garrus">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Garrus</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="james">
+                <input id="james" checked type="checkbox" data-img="james" value="James">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">James</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="javik">
+                <input id="javik" checked type="checkbox" data-img="javik" value="Javik">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Javik</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="liara-m3">
+                <input id="liara-m3" checked type="checkbox" data-img="liara" value="Liara">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Liara</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="tali-m3">
+                <input id="tali-m3" checked type="checkbox" data-img="tali" value="Tali">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Tali</span>
+            </label>
+        </div>
+
+
+    </section>
+    <section class="squad-choices-layout meAndromeda hidden">
+        <div class="squad-choice">
+            <label class="switch" for="cora">
+                <input id="cora" checked type="checkbox" data-img="cora" value="Cora">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Cora</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="drack">
+                <input id="drack" checked type="checkbox" data-img="drack" value="Drack">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Drack</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="jaal">
+                <input id="jaal" checked type="checkbox" data-img="jaal" value="Jaal">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Jaal</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="liam">
+                <input id="liam" checked type="checkbox" data-img="liam" value="Liam">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Liam</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="peebee">
+                <input id="peebee" checked type="checkbox" data-img="peebee" value="PeeBee">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">PeeBee</span>
+            </label>
+        </div>
+        <div class="squad-choice">
+            <label class="switch" for="vetra">
+                <input id="vetra" checked type="checkbox" data-img="vetra" value="Vetra">
+                <span class="switch-toggle">
+                    <span class="switch-toggle-indicator"></span>
+                </span>
+                <span class="switch-label">Vetra</span>
+            </label>
+        </div>
+    </section>
+
+
+    <div class="randomize">
+        <button id="randomize-squad" type="button" class="button"><span>Randomize</span> Squad</button>
+    </div>
+    <section class="layout-squad">
+        <h3>Your Squad</h3>
+
+        <div class="layout-squad-members">
+            <div class="card" id="squad-member-1">
+                <div class="card-image">
+                    <img src="assets/images/n7.png" alt="" width="256" height="">
+                </div>
+                <h3 class="card-heading">Squad Member</h3>
+            </div>
+            <div class="card" id="squad-member-2">
+                <div class="card-image">
+                    <img src="assets/images/n7.png" alt="" width="256" height="">
+                </div>
+                <h3 class="card-heading">Squad Member</h3>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

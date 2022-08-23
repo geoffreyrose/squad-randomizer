@@ -1,0 +1,9 @@
+@use '../../bits/colors';
+@use '../../bits/mixins';
+@use '../../bits/setup';
+
+select {
+    background: colors.$white;
+    height: 2.25rem;
+    width: 100%;
+}
