@@ -1,0 +1,52 @@
+@use '../../bits/colors';
+@use '../../bits/mixins';
+@use '../../bits/setup';
+
+.fancy-select {
+    background: #fafafa;
+    border-bottom: 2px solid colors.$gray-color-300;
+    border-radius: 0;
+    color: colors.$off-black;
+    display: inline-block;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+
+    svg {
+        color: colors.$gray-color-700;
+        display: inline-block;
+        fill: colors.$gray-color-700;
+        font-weight: 900;
+        pointer-events: none;
+        position: absolute;
+        right: .75rem;
+        top: .625rem;
+        width: .75rem;
+        z-index: 1;
+    }
+
+    select {
+        @include mixins.body-font-bold;
+
+        appearance: none;
+        background: #fafafa;
+        border: 0;
+        // border: 1px solid $gray-color-500;
+        border-radius: setup.$global-radius;
+        color: colors.$off-black;
+        line-height: 1.25;
+        // min-width: 100px;
+        outline: none;
+        padding: .375rem 1.75rem .375rem .625rem;
+        position: relative;
+        width: 100%;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            border-color: colors.$primary-color-500;
+        }
+    }
+}

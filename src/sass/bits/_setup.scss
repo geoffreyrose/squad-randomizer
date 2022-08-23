@@ -1,0 +1,36 @@
+$heading-font: 'Orbitron';
+$body-font: 'Orbitron';
+
+$heading-fallback: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+$body-fallback: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+
+$global-radius: 16px;
+$font-size-multiplier: 1;
+
+$side-navigation-width: (
+    medium: 17rem,
+    large: 17rem,
+    xlarge: 19rem,
+);
+
+$top-header-height: 5.25rem;
+
+$breakpoints: (
+    small: 0,
+    medium: 46.25rem,
+    large: 64.375rem,
+    xlarge: 82rem,
+    xxlarge: 130.75rem,
+);
+
+$grid-gutters: (
+    small: 1rem,
+    medium: 1.25rem,
+    large: 1.5rem,
+);
+
+$grid-container-padding:  (
+    small: 1.5rem,
+    medium: 2rem,
+    large: 3rem,
+);

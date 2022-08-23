@@ -1,0 +1,5 @@
+@use '../bits/mixins';
+
+body {
+    @include mixins.body-font-regular;
+}

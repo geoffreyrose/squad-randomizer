@@ -1,0 +1,46 @@
+@use 'sass:map';
+@use '../bits/colors';
+@use '../bits/mixins';
+@use '../bits/setup';
+
+body {
+    background: #262932;
+}
+
+.home-base-layout {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.layout-squad {
+    column-gap: map.get(setup.$grid-gutters, small);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    user-select: none;
+}
+
+.layout-squad-members {
+    column-gap: map.get(setup.$grid-gutters, small);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 0 1rem;
+    user-select: none;
+}
+
+.randomize {
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.squad-choices-layout {
+    column-gap: map.get(setup.$grid-gutters, small);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    justify-content: center;
+    row-gap: .25rem;
+    padding: 0 1rem;
+}

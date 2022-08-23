@@ -1,0 +1,91 @@
+@use 'bits/mixins';
+@use 'bits/setup';
+
+// taken from https://github.com/foundation/foundation-sites/blob/develop/scss/_global.scss
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+// Default body styles
+body {
+    @include mixins.body-font-regular;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    // Get rid of gap under images by making them display: inline-block; by default
+    display: inline-block;
+    vertical-align: middle;
+    // Grid defaults to get images and embeds to work properly
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+// Make sure textarea takes on height automatically
+textarea {
+    height: auto;
+    min-height: 50px;
+    border-radius: setup.$global-radius;
+}
+
+// Make select elements are 100% width by default
+select {
+    border-radius: setup.$global-radius;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+// Styles Google Maps and MapQuest embeds properly
+// sass-lint:disable-line no-ids
+
+.map_canvas,
+.mqa-display {
+    embed,
+    img,
+    object {
+        max-width: none !important;
+    }
+}
+
+// Reset <button> styles created by most browsers
+button {
+    @include mixins.disable-mouse-outline;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: setup.$global-radius;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+// Prevent text overflow on pre
+pre {
+    overflow: auto;
+}
+
+// Make reset inherit font-family instead of settings sans-serif
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}

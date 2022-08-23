@@ -1,0 +1,28 @@
+{
+  "name": "squad-randomizer",
+  "version": "1.0.0",
+  "description": "A web app to randomizer your squad in the mass effect games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffreyrose/squad-randomizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geoffreyrose/squad-randomizer/issues"
+  },
+  "homepage": "https://github.com/geoffreyrose/squad-randomizer#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.54.4",
+    "sass-loader": "^12.6.0"
+  }
+}

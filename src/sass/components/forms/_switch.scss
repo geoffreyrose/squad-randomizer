@@ -1,0 +1,59 @@
+@use '../../bits/colors';
+@use '../../bits/mixins';
+@use '../../bits/setup';
+
+.switch {
+    align-items: center;
+    display: flex;
+    margin: .25rem 0;
+
+    input {
+        display: none;
+
+        &:checked ~ {
+            .switch-label {
+                color: colors.$white;
+            }
+
+            .switch-toggle .switch-toggle-indicator {
+                background: colors.$primary-color-500;
+                left: .1875rem;
+            }
+
+        }
+    }
+}
+
+.switch-toggle {
+    background: colors.$white;
+    box-shadow: 0 0 3px colors.$primary-color-200;
+    border-radius: 5rem;
+    display: inline-block;
+    font-size: 1.125rem;
+    height: 1.5rem;
+    position: relative;
+    width: 2.5rem;
+}
+
+.switch-toggle-indicator {
+    @include mixins.single-transition();
+    background: colors.$gray-color-500;
+    border-radius: 5rem;
+    box-shadow: 0 0 2px colors.$primary-color-800;
+    display: inline-block;
+    height: 1.125rem;
+    left: 1.1875rem;
+    position: absolute;
+    top: .1875rem;
+    width: 1.125rem;
+}
+
+.switch-label {
+    @include mixins.single-transition();
+    @include mixins.heading-font-bold;
+
+    color: colors.$gray-color-700;
+
+    letter-spacing: .025em;
+    margin-left: .5rem;
+}

@@ -1,0 +1,35 @@
+@use '../bits/colors';
+@use '../bits/mixins';
+@use '../bits/setup';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: colors.$font-color;
+    margin: 2rem 0 .5rem;
+}
+
+h1 {
+    @include mixins.heading-font-bold;
+    color: colors.$white;
+
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+h3 {
+    @include mixins.heading-font-bold;
+
+    color: colors.$white;
+    font-size: 1.375rem * setup.$font-size-multiplier;
+    line-height: 1;
+    margin: 0;
+    padding-bottom: 1rem;
+    text-align: center;
+}
