@@ -3,13 +3,25 @@
 @use '../bits/mixins';
 @use '../bits/setup';
 
+html {
+    height: 100%;
+}
+
 body {
-    background: #262932;
+    background-color: #262932;
+    background-image: url('../images/batthern.png'), linear-gradient(135deg, #1f222c, #1b3c4b);
+    background-repeat: repeat;
+    height: 100%;
+    position: relative;
 }
 
 .home-base-layout {
-    max-width: 50rem;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
     margin: 0 auto;
+    max-width: 50rem;
+    padding-bottom: 1rem;
 }
 
 .layout-squad {
@@ -43,4 +55,9 @@ body {
     justify-content: center;
     row-gap: .25rem;
     padding: 0 1rem;
+}
+
+.spacer {
+    flex: 1 1 auto;
+
 }

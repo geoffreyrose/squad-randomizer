@@ -5,3 +5,6 @@ mix.setPublicPath('public')
     .sass('src/sass/app.scss', 'public/assets/css/app.css')
     .copy('src/images', 'public/assets/images')
     .browserSync('squad-randomizer.test')
+    .options({
+        processCssUrls: false
+    })
