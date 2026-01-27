@@ -16,4 +16,4 @@ A web app to randomize your squad or companions in the video games.
 
 On mobile "Add to home Screen" for a full-screen instance of the web app.
 
-[Link](http://geoffreyrose.github.io/squad-randomizer)
+[Squad Randomizer](http://geoffreyrose.github.io/squad-randomizer)
