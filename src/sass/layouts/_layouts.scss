@@ -4,23 +4,29 @@
 @use '../bits/setup';
 
 html {
-    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
     background-color: #262932;
-    background-image: url('../images/batthern.png'), linear-gradient(135deg, #1f222c, #1b3c4b);
+    background-image: url('../../images/batthern.png'), linear-gradient(135deg, #1f222c, #1b3c4b);
     background-repeat: repeat;
-    height: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
     position: relative;
 }
 
 .home-base-layout {
     display: flex;
+    flex: 1 1 auto;
     flex-flow: column nowrap;
-    height: 100%;
     margin: 0 auto;
     max-width: 50rem;
+    width: 100%;
     padding-bottom: 1rem;
 }
 
@@ -35,12 +41,24 @@ body {
 
 .layout-squad-members {
     column-gap: map.get(setup.$grid-gutters, small);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     padding: 0 1rem;
     user-select: none;
+
+    .card {
+        flex: 0 1 calc(50% - map.get(setup.$grid-gutters, small) / 2);
+        margin-top: 1rem;
+
+        @media screen and (min-width: 800px) {
+            flex: 1 1 calc(33% - map.get(setup.$grid-gutters, small));
+            margin-top: 1rem;
+        }
+    }
 }
+
+
 
 .randomize {
     padding: 1.5rem 1rem;
